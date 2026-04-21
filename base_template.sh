@@ -1,3 +1,4 @@
+#!/bin/bash
 sudo dnf update -y
 sudo dnf install -y \
   vim curl wget git \

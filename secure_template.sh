@@ -1,3 +1,4 @@
+#!/bin/bash
 # 修改SSH配置，禁止root直接远程登录
 sudo sed -ri 's/^#?PermitRootLogin .*/PermitRootLogin no/' /etc/ssh/sshd_config
 # 修改SSH配置文件中Port 22 替换为 Port 22222; 避开端口扫描（云服务器需同步安全组）

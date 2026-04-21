@@ -1,3 +1,4 @@
+#!/bin/bash
 sudo tee /etc/sysctl.d/99-ingress.conf >/dev/null <<'EOF'
 # 极大提升队列，应对突发高并发握手
 net.core.somaxconn = 65535

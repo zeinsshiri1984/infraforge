@@ -1,3 +1,4 @@
+#!/bin/bash
 # (K8s) 关闭 swap，K8s kubelet 默认要求; 如果是跑普通 Java/Go 进程的物理机，建议保留 Swap（配置很低的 swappiness），防止突发 OOM。K8s 节点则关闭
 sudo swapoff -a
 sudo sed -ri '/swap/s/^/#/' /etc/fstab

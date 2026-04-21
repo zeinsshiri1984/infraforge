@@ -1,3 +1,4 @@
+#!/bin/bash
 # 内核参数
 sudo tee /etc/sysctl.d/99-master.conf <<'EOF'
 # (通用) 开启 IPv4 转发

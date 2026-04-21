@@ -1,3 +1,4 @@
+#!/bin/bash
 sudo tee /etc/sysctl.d/99-worker.conf >/dev/null <<'EOF'
 # (通用高并发) 提升半连接队列和全连接队列上限
 net.core.somaxconn = 65535

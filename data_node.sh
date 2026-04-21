@@ -1,3 +1,4 @@
+#!/bin/bash
 sudo tee /etc/sysctl.d/99-data.conf >/dev/null <<'EOF'
 # 极大降低使用 Swap 的倾向，但不彻底关闭，防止内存泄漏直接 Kill 数据库进程
 vm.swappiness = 10

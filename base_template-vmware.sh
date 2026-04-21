@@ -1,3 +1,4 @@
+#!/bin/bash
 dnf install -y \
   open-vm-tools
   

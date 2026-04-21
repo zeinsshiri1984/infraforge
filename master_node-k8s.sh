@@ -1,3 +1,4 @@
+#!/bin/bash
 # 关闭 swap（K8s）
 sudo swapoff -a
 sudo sed -ri '/swap/s/^/#/' /etc/fstab
