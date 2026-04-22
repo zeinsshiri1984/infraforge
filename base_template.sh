@@ -106,5 +106,3 @@ sudo rm -f /var/log/wtmp /var/log/btmp /var/log/lastlog
 cat /dev/null > ~/.bash_history
 sudo history -c
 sudo history -w
-
-sudo shutdown -h now

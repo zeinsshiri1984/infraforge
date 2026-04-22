@@ -1,4 +1,7 @@
 #!/bin/bash
+
+source ./secure_template.sh
+
 # 关闭 swap（K8s）
 sudo swapoff -a
 sudo sed -ri '/swap/s/^/#/' /etc/fstab
@@ -17,3 +20,5 @@ sudo modprobe br_netfilter
 echo "br_netfilter" | sudo tee /etc/modules-load.d/k8s.conf
 
 sudo sysctl --system
+
+sudo shutdown -h now

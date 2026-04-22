@@ -1,4 +1,12 @@
 #!/bin/bash
+
+# 检查环境变量决定source哪个基础模板
+if [[ "$VMWARE" == "1" ]]; then
+    source ./base_template-vmware.sh
+else
+    source ./base_template.sh
+fi
+
 # 修改SSH配置，禁止root直接远程登录
 sudo sed -ri 's/^#?PermitRootLogin .*/PermitRootLogin no/' /etc/ssh/sshd_config
 # 修改SSH配置文件中Port 22 替换为 Port 22222; 避开端口扫描（云服务器需同步安全组）

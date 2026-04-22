@@ -1,4 +1,7 @@
 #!/bin/bash
+
+source ./secure_template.sh
+
 sudo tee /etc/sysctl.d/99-ingress.conf >/dev/null <<'EOF'
 # 极大提升队列，应对突发高并发握手
 net.core.somaxconn = 65535
@@ -14,3 +17,5 @@ net.ipv4.tcp_keepalive_probes = 3
 EOF
 
 sudo sysctl --system
+
+sudo shutdown -h now
